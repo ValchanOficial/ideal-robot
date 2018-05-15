@@ -6,7 +6,7 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class SearchTest {
@@ -16,9 +16,9 @@ public class SearchTest {
 	
 	@Before
 	public void setUp() {
-		WebDriverManager.firefoxdriver().setup();;//configura para o navegador
+		WebDriverManager.chromedriver().setup();;//configura para o navegador
 		//baixa dependencias antes do teste
-		this.driver = new FirefoxDriver();//ChromeDriver ou qualquer navegador
+		this.driver = new ChromeDriver();//ChromeDriver ou qualquer navegador
 		this.driver.get("https://pt.wikipedia.org");//referencia site a ser testado
 		this.search = new SearchInputText(driver);
 	}
