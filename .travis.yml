@@ -3,6 +3,4 @@ language:
 jdk:
     - oraclejdk8
 addons:
-    firefox: latest
-    
-    
+    firefox: "49.0"
